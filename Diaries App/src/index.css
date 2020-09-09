@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Amarante');
+@import url('https://fonts.googleapis.com/css?family=Beth Ellen');
+:root {
+  --primary-color: #778899;
+  --error-color: #f85032;
+  --text-color: #5e4f4f;
+  --transition: all ease-in-out 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.auth {
+  background: url('./images/Hello.gif') no-repeat left center;
+  background-color: rgba(204, 204, 204, 0.144);
+  background-size: 600px 600px !important;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background-image: linear-gradient(120deg, #0077ffd3 0%, #0077ffd3 100%);
+  border-radius: 5px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 2px 14px 20px 5px #999;
+  max-width: 500px;
+  width: 90% !important;
+  margin: 0 auto;
+  animation: card 3s ease alternate-reverse 1;
+  display: flex;
+}
+.formtitle {
+  font-family: 'Amarante';
+  font-size: 2.1rem;
+  color: rgb(235, 235, 235);
+  font-weight: 700;
+  border-top: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.footer {
+  margin-top: 130%;
+}
+.inputWrapper {
+  margin: 1rem auto;
+  width: 100% !important;
+}
+.in {
+  animation: inputAnime 3s ease 1;
+  font-family: 'Amarante';
+}
+.bttn {
+  background-color: rgba(107, 255, 49, 0.658);
+}
+.fa {
+  color: rgb(0, 255, 0);
+}
+.credit {
+  margin-top: 50px !important;
+  font-family: 'Beth Ellen';
+}
+.avatar{
+  width: 100px;
+  height: 100px;
+}
+.typewriter .anime {
+  color: #eee;
+  overflow: hidden;
+  border-right: 0.15em solid #c3e7ff8e;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  font-family: 'Beth Ellen';
+  animation: typing 3.1s steps(40, end), blink-caret 0.55s step-end infinite;
+}
+
+input:not([type='checkbox']),
+button {
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+input:not([type='checkbox']),
+textarea {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+input:not([type='checkbox']):focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  background-color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  padding: 1em;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+button.secondary {
+  color: var(--primary-color);
+  background-color: #fff;
+  border-color: #fff;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  margin: 0;
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  color: var(--error-color);
+  animation: 0.3s ease-in-out forwards fadeIn;
+}
+
+.two-cols {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.two-cols .left {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.two-cols .right {
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.title,
+.subtitle {
+  margin: 0;
+}
+
+.diary-tile {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1em;
+}
+
+.editor {
+  height: 100%;
+  padding: 1em;
+}
+
+.editor input {
+  width: 100%;
+}
+
+.editor textarea {
+  width: 100%;
+  height: calc(100vh - 160px);
+}
+
+.entries ul {
+  list-style: none;
+  padding: 0;
+}
+
+.entries li {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.entries li:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .two-cols .left {
+    width: 25%;
+  }
+
+  .two-cols .right {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 388px) {
+  .auth {
+    background-size: none;
+  }
+
+  .avatar {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 370px){
+  .card{
+    width: 100%;
+  }
+  .avatar{
+    width: 130px;
+    height: 120px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes card {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes inputAnime {
+  from {
+    margin-left: -100px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #0099ff8e;
+  }
+}
